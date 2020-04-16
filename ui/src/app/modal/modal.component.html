@@ -1,22 +1,27 @@
-
 <h2 mat-dialog-title>Szczegóły lokalu</h2>
-
 <mat-dialog-content class="mat-typography">
-  <h3><strong>Dane kontaktowe</strong></h3>
-  <ul class="list-group">
-    <li class="list-group-item"><i class="fas fa-bookmark mr-2"></i><span class="h-3">Nazwa: <strong>{{local.name}}</strong></span></li>
-    <li class="list-group-item"><i class="fas fa-map-marker-alt mr-2"></i><span>Adres: <strong>{{local.address.street}} {{local.address.localNumber}}</strong></span></li>
-    <li class="list-group-item"><i class="fas fa-globe mr-2"></i><span>Strona internetowa: <strong>www.bolek.pl</strong></span></li>
-    <li class="list-group-item"><i class="fas fa-phone mr-2"></i><span>Kontakt: <strong>{{local.details.phoneNumber}}</strong></span></li>
-    <li class="list-group-item"><i class="fas fa-clock mr-2"></i><span>Godziny otwarcia:
-        <ul>
-          <li *ngFor="let detail of local.details.openingHoursList">
-            {{detail.weekday}}: {{detail.open}} - {{detail.close}}
-          </li>
-        </ul>
-      </span>
-    </li>
-  </ul>
+  <div class="row">
+    <div class="col-lg-6">
+      <h3><strong>Dane kontaktowe</strong></h3>
+      <ul class="list-group ml-3">
+        <li class="list-group-item"><i class="fas fa-bookmark mr-2"></i><span class="h-3">Nazwa: <strong>{{local.name}}</strong></span></li>
+        <li class="list-group-item"><i class="fas fa-map-marker-alt mr-2"></i><span>Adres: <strong>{{local.address.street}} {{local.address.localNumber}}</strong></span></li>
+        <li class="list-group-item"><i class="fas fa-globe mr-2"></i><span>Strona internetowa: <strong>www.bolek.pl</strong></span></li>
+        <li class="list-group-item"><i class="fas fa-phone mr-2"></i><span>Kontakt: <strong>{{local.details.phoneNumber}}</strong></span></li>
+        <li class="list-group-item"><i class="fas fa-clock mr-2"></i><span>Godziny otwarcia:
+            <ul>
+              <li *ngFor="let detail of local.details.openingHoursList">
+                {{detail.weekday}}: {{detail.open}} - {{detail.close}}
+              </li>
+            </ul>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-6">
+      <img src="src=../../assets/pub.jpg" class="img-fluid" alt="...">
+    </div>
+  </div>
 
   <h3><strong>Menu:</strong></h3>
   <div class="table-responsive table-striped">
@@ -38,11 +43,7 @@
     </table>
   </div>
 
-  <h3>Incredible tooling</h3>
-  <p>Build features quickly with simple, declarative templates. Extend the template language with
-    your own components and use a wide array of existing components. Get immediate Angular-specific
-    help and feedback with nearly every IDE and editor. All this comes together so you can focus
-    on building amazing apps rather than trying to make the code work.</p>
+
 
 
 </mat-dialog-content>
